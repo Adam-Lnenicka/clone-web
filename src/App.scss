@@ -1,0 +1,272 @@
+@mixin button-link{
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    font-weight:800;
+    text-transform:uppercase;
+    border-radius: 0.3em;
+    font-size: 0.8rem;
+    letter-spacing: 1px;;
+
+}
+
+
+.Footer{
+    background-color: #3f3f3f;
+    color: white;
+    text-align: center;
+    button{
+        @include button-link();
+        color: white;
+        background-color: #ff7d01;
+
+
+    
+
+    }
+    span{
+        color:  #f98a48;
+    }
+
+    p{
+        line-height: 4px;
+        color: white;
+
+
+    }
+
+
+
+    form{
+        display: flex;
+        flex-direction: column;
+        width:300px;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1em;
+        input, button{
+            height: 2.7em;
+            border-radius: 0.3em;
+            border:none;
+        }
+        p{
+            line-height: 1.2em;    
+        }
+
+    }
+
+
+    a{
+        text-decoration: none;
+        color:#b6b6b6;
+        padding: 1em;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        span{
+            color:#f98a48;
+            font-size:1rem
+        }
+    }
+}
+
+
+
+.icons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.icon1{
+    background-color: #b6b6b6;
+    color: #3f3f3f;
+    width: 35px;
+    height:35px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 1em;
+}
+
+.icon2{
+    color: #b6b6b6;
+    margin: 1em;
+}
+
+
+
+
+
+
+h1{
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom:0;
+
+}
+
+h2{
+    color: blue;
+    font-size: 1.2rem;
+    font-weight: 800
+}
+
+h5{
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #b6b6b6;
+}
+
+p{
+    color: #3f3f3f
+}
+
+
+
+.card{
+    border: 1px grey solid;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:1em;
+    object-fit: cover;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    img{
+        
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+    }
+    a{
+        @include button-link();
+        color: #007bc7;
+        border: 2.5px #d9d9d9 solid;
+    }
+    
+}
+
+.innovation{
+    border: 1px #d9d9d9 solid;
+    display: flex;
+    align-items: center;
+    background-color:#f3f3f3;
+    margin:1em;
+    padding: 1em 1.5em;
+    img{
+        width:80px;
+        height:80px;
+    }
+    p{
+        padding-left: 1.5em;
+    }
+}
+
+
+.news{
+    background-color:#d2e2ec;
+    padding:0.6em 1.5em;
+    margin:1em;
+    div{
+        div{
+            line-height:0.2em;
+            letter-spacing:1px;
+            text-transform: uppercase;
+    
+        }
+    }
+
+
+}
+
+.banner{
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    img{
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+    }
+    p{
+        color: white;
+        font-size: 1.1rem;
+    }
+   
+
+}
+
+
+
+
+.case-study{
+    padding: 4em;
+    border: 1px black solid;
+    img{
+        max-width: 400px;
+    }
+
+    a{  
+        @include button-link();
+
+        color: white;
+        background-color: #007bc7;
+
+                 
+    }
+}
+
+.banner-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #3f3f3f;
+    color:white;
+    padding: 1em;
+    div{
+        display: inline-block;
+    }
+    a{  
+        @include button-link();
+
+        color: white;
+        background-color: #007bc7;
+
+                 
+    }
+    
+}
+
+
+
+
+@media(min-width:900px){
+    .innovation{
+        flex-direction: column;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .innovations{
+        display: flex
+    }
+
+    .news-section{
+        display: flex
+    }
+    .news{
+        display:flex;
+    }
+}
