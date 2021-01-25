@@ -8,8 +8,10 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <Home/>
-      <Footer/>
+      <div className="inner-app">
+        <Home/>
+        <Footer/>
+      </div>
      
     </div>
   );

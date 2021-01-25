@@ -4,13 +4,16 @@ export default function Card(props){
     return(
     <div className="card">
         <img src ={props.image}/>
-        <div>
-            <h3 style={{display: !props.subtitle && "none"}}>{props.subtitle}</h3>
-            <h2 style={{display: !props.title2 && "none"}}>{props.title2}</h2>
-            <h5 style={{display: !props.author && "none"}}>{props.author}</h5>
+        <div className="inner-card">
+            <h4 style={{display: !props.subtitle && "none"}}>{props.subtitle}</h4>
+            <h3 style={{display: !props.title2 && "none"}}>{props.title2}</h3>
+            <div className="black"><h3 style={{display: !props.title1 && "none"}}>{props.title1}</h3></div>
+            <div className="name"><p style={{display: !props.author && "none"}}>{props.author}</p></div>
             <p>{props.text}</p>
-            <h5 style={{display: !props.fullAuthor && "none"}}>{props.fullAuthor}</h5>
-            <h5 style={{display: !props.place && "none"}}>{props.place}</h5>
+            <div className="name">
+                <p style={{display: !props.fullAuthor && "none"}}>{props.fullAuthor}</p>
+                <p style={{display: !props.place && "none"}}>{props.place}</p>
+            </div>
 
             <a href="/">{props.button}</a>
         </div>

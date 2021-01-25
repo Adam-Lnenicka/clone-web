@@ -1,12 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Card from '../components/Card.jsx'
 import Innovation from '../components/Innovation.jsx'
 import News from '../components/News.jsx'
+import CaseStudy from '../components/CaseStudy.jsx'
 
 
 export default function Home(){
+    
+    const display =<div className="icon1"><i class="fab fa-twitter"></i>hi there</div>
+    const [show, setShow] = useState(false)
+    const [button, setButton] = useState(display)
+
+    const onClick = () => setShow(true)
+    const onClick2 = () => setButton(null)
+
+   
+
+  
+
+
     return(
         <div className="Home">
+
+            
+
             <div className="banner">
                 
                     <img src="https://www.cxpartners.co.uk/ui/img/homepage/hero-lg.png"/>
@@ -18,8 +35,9 @@ export default function Home(){
                     
                
             </div>
+            <div className="inner-padding">
 
-                <div>
+                <div className="introduction">
                     <h2>The design innovation partner</h2>
                     <p>We believe that what's best for the customer is best for the business.<br/>
                     If you're a customer champion or digital leader in a complex organisation or tightly regulated market, we can help you to:</p>
@@ -42,7 +60,27 @@ export default function Home(){
                                 text="Become a truly customer-centred organisation"
                     />
 
-                </div>    
+                </div>  
+
+
+                    
+
+                <h2>Our work</h2>
+                    <Card   image="https://www.cxpartners.co.uk/ui/img/homepage/richard-pash-xl.jpg" 
+                    
+                            text="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
+                            fullAuthor="RICHARD PASH"
+                            place="MARKETING DIRECTOR, ZURICH INSURANCE UK"
+                            button="read the case study"
+                            />
+
+                <h2>Ideas & Resources</h2>
+                <Card   image="https://www.cxpartners.co.uk/ui/img/ebc/ebc-brochure-xl-1x.jpg" 
+                            subtitle="our books"
+                            title2="Simple and Usable"
+                            text="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
+                            button="read the case study"
+                            />
 
                 <div className="news-section">
                     <News   title="InsurTech 2021: customer experience remains a key battleground"
@@ -60,47 +98,57 @@ export default function Home(){
                 </div>
 
 
-                <div className="case-study">
-                    <img src="https://www.cxpartners.co.uk/ui/img/homepage/coop-banner-750.jpg"/>
-                    <p>The secret to designing a better online supermarket? Fewer features.</p>
-                    <a href="/">Read the case study</a>
+                <div>
+                    <div onClick={onClick2}><div onClick={onClick} >{button}</div></div>
+
+                    { show ? 
+                    <div>
+                        <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/coop-banner-750.jpg"
+                                    text="The secret to designing a better online supermarket? Fewer features."
+                                    button="Read the case study"
+                        />   
+
+                        <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/bcc-banner-750.jpg"
+                                    text="How did Bristol City Council transform its services? By listening to people."
+                                    button="Read the case study"
+                        />   
+                          
+                         
+                    </div>
+                     : null }
                 </div>
 
-                <div className="case-study">
-                    <img src="https://www.cxpartners.co.uk/ui/img/homepage/bcc-banner-750.jpg"/>
-                    <p>How did Bristol City Council transform its services? By listening to people.</p>
-                    <a href="/">Read the case study</a>
+                <div clasName="expand"></div>
+                <div className="case-study-section">
+                    <div className="case-study">
+                        <img src="https://www.cxpartners.co.uk/ui/img/homepage/coop-banner-750.jpg"/>
+                        <p>The secret to designing a better online supermarket? Fewer features.</p>
+                        <a href="/">Read the case study</a>
+                    </div>
+
+                    <div className="case-study">
+                        <img src="https://www.cxpartners.co.uk/ui/img/homepage/bcc-banner-750.jpg"/>
+                        <p>How did Bristol City Council transform its services? By listening to people.</p>
+                        <a href="/">Read the case study</a>
+                    </div>
                 </div>
 
                 <div>
 
-                    <h2>Our work</h2>
-                    <Card   image="https://www.cxpartners.co.uk/ui/img/homepage/richard-pash-xl.jpg" 
-                    
-                            text="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
-                            fullAuthor="RICHARD PASH"
-                             place="MARKETING DIRECTOR, ZURICH INSURANCE UK"
-                            button="read the case study"
-                            />
 
-                    <Card   image="https://www.cxpartners.co.uk/ui/img/ebc/ebc-brochure-xl-1x.jpg" 
-                            
-                            text="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
-                            fullAuthor="RICHARD PASH"
-                            place="MARKETING DIRECTOR, ZURICH INSURANCE UK"
-                            button="read the case study"
-                            />
+
+
 
                     <Card   image="https://www.cxpartners.co.uk/ui/img/homepage/simple-and-usable-xl-1x.jpg" 
                             subtitle="our books"
-                            title2="Simple and Usable"
+                            title1="Simple and Usable"
                             text="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
-                            fullAuthor="RICHARD PASH"
+                            author="RICHARD PASH"
 
                             button="read the case study"
                             />
                 </div>
-                
+
                 <div className="news-section">
                 <News   title="Learning from lockdown: accelerating change without creating a crisis"
                         author="GILES COLBORNE"
@@ -114,7 +162,7 @@ export default function Home(){
                         text="Serverless computing is a game-changer - delivering huge cost-savings and scalability. You can plug gaps in your service offering by employing Serverless microservices quickly and cheaply."
                 />
                 </div>
-            
+                </div>
         </div>
     )
 }

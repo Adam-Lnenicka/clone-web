@@ -3,25 +3,28 @@ import React from 'react'
 export default function Footer(){
     return(
         <div className="Footer">
-            <div>
-                <div>
-                    <h5>London Studio</h5>
-                    <p>Cairo Studios</p>
-                    <p>4 Nile Street</p>
-                    <p>Shoreditch</p>
-                    <p>London, N1 7RF</p>
-                    <p>United Kingdom</p>
-                    <a href="/"><span>+44 (0) 207 062 7081</span></a>
+            <div className="main-footer">
+                <div className="locations">
+                    <div>
+                        <h5>London Studio</h5>
+                        <p>Cairo Studios</p>
+                        <p>4 Nile Street</p>
+                        <p>Shoreditch</p>
+                        <p>London, N1 7RF</p>
+                        <p>United Kingdom</p>
+                        <a href="/"><span>+44 (0) 207 062 7081</span></a>
 
-                </div>
+                    </div>
 
-                <div>
-                    <h5>Bristol Studio</h5>
-                    <p>2 College Square</p>
-                    <p>Anchor Road</p>
-                    <p>Bristol, BS1 5UE</p>
-                    <p>United Kingdom</p>
-                    <a href="/"><span>+44 (0) 117 930 3530</span></a>
+                    <div>
+                        <h5>Bristol Studio</h5>
+                        <p>2 College Square</p>
+                        <p>Anchor Road</p>
+                        <p>Bristol, BS1 5UE</p>
+                        <p>United Kingdom</p>
+                        <a href="/"><span>+44 (0) 117 930 3530</span></a>
+                    </div>
+                    
                 </div>
                 <div>
                     <h5>New business</h5>
@@ -40,8 +43,8 @@ export default function Footer(){
 
                 </div>
             </div>
-            <div>
-                <div >
+            <div className="lower-footer">
+                <div>
                     <a href="/">OUR BOOKS</a>
                     <a href="/">UX RESOURCES</a>
                     <a href="/">TERMS OF USE</a>

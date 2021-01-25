@@ -1,6 +1,6 @@
 @mixin button-link{
     text-decoration: none;
-    padding: 0.8em 1.5em;
+    padding: 0.65em 1.5em;
     font-weight:800;
     text-transform:uppercase;
     border-radius: 0.3em;
@@ -8,6 +8,13 @@
     letter-spacing: 1px;;
 
 }
+
+
+$light-grey: #d9d9d9;
+$dark: #393838;
+$hilight-blue: #007bc7;
+
+
 
 
 .Footer{
@@ -18,6 +25,7 @@
         @include button-link();
         color: white;
         background-color: #ff7d01;
+        font-size: 0.8rem;
 
 
     
@@ -39,7 +47,7 @@
     form{
         display: flex;
         flex-direction: column;
-        width:300px;
+        width:250px;
         margin: 0 auto;
         text-align: left;
         line-height: 1em;
@@ -58,7 +66,7 @@
     a{
         text-decoration: none;
         color:#b6b6b6;
-        padding: 1em;
+        padding: 1em 0;
         font-size: 0.8rem;
         letter-spacing: 1px;
         span{
@@ -109,9 +117,27 @@ h1{
 }
 
 h2{
-    color: blue;
+    font-size: 1.4rem;
+    color: $dark;
+
+    font-weight: 800;
+    text-align: center;
+}
+
+h3{
+    color: $hilight-blue;
     font-size: 1.2rem;
-    font-weight: 800
+    font-weight: 800;
+    margin-bottom:0;
+}
+
+h4{
+    color: $dark;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size:0.97em;
+    margin:0;
 }
 
 h5{
@@ -126,8 +152,16 @@ p{
 
 
 
+.introduction{
+    text-align: center;
+    margin: 3em 1em;
+    p{
+      font-size: 1.05rem;   
+    }
+}
+
 .card{
-    border: 1px grey solid;
+    border: 1px $light-grey solid;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -136,17 +170,24 @@ p{
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    div{
+    letter-spacing: 1px;;
+    p{
+        font-size: 1.2rem;
+    }
+    
+    .inner-card{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        padding:2em;
+
     }
     img{
         
         object-fit: cover;
-        height: 200px;
+        height: 270px;
         width: 100%;
     }
     a{
@@ -154,8 +195,23 @@ p{
         color: #007bc7;
         border: 2.5px #d9d9d9 solid;
     }
+    .name{
+        p{
+            margin:0;
+            padding:0;
+            font-size: 0.95rem;
+        }
+    }
+    .black{
+        h3{
+            color:$dark;
+        }
+
+
+    }
     
 }
+
 
 .innovation{
     border: 1px #d9d9d9 solid;
@@ -164,6 +220,7 @@ p{
     background-color:#f3f3f3;
     margin:1em;
     padding: 1em 1.5em;
+
     img{
         width:80px;
         height:80px;
@@ -178,9 +235,11 @@ p{
     background-color:#d2e2ec;
     padding:0.6em 1.5em;
     margin:1em;
+
     div{
+
         div{
-            line-height:0.2em;
+            margin:0;
             letter-spacing:1px;
             text-transform: uppercase;
     
@@ -194,6 +253,7 @@ p{
     display:flex;
     text-align: center;
     flex-direction: column;
+    
     img{
         object-fit: cover;
         height: 200px;
@@ -202,28 +262,7 @@ p{
     p{
         color: white;
         font-size: 1.1rem;
-    }
-   
-
-}
-
-
-
-
-.case-study{
-    padding: 4em;
-    border: 1px black solid;
-    img{
-        max-width: 400px;
-    }
-
-    a{  
-        @include button-link();
-
-        color: white;
-        background-color: #007bc7;
-
-                 
+        margin-bottom:1.5em
     }
 }
 
@@ -234,6 +273,7 @@ p{
     background-color: #3f3f3f;
     color:white;
     padding: 1em;
+    padding-bottom:2.5em;
     div{
         display: inline-block;
     }
@@ -251,7 +291,80 @@ p{
 
 
 
+.case-study{
+    padding: 4em;
+    border: 1px $light-grey solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+    margin:1em;
+    text-align: center;
+
+    p{
+        font-size: 1.8rem;
+        margin:2em 1.8em;
+
+    }
+
+    img{
+        max-width: 400px;
+    }
+
+    a{  
+        @include button-link();
+        background-color: white;
+        color: #007bc7;
+        box-sizing: border-box;
+        border: 3px $light-grey solid;
+        &:hover{
+            color: white;
+            background-color: #007bc7;
+            border: 3px #007bc7 solid;        }
+
+                 
+    }
+}
+
+
+
+
+
 @media(min-width:900px){
+    .App{
+        background-color: $light-grey;
+        .inner-app{
+            margin: 0 2em;
+            background-color: white;
+            
+        }
+    }
+    .inner-padding{
+        padding:4em;
+    }
+
+    .banner{
+        flex-direction: row-reverse;
+        height:600px;
+        
+        img{
+            height:100%;
+            width:60%
+        }
+    }
+
+    .banner-info{
+        width:40%;
+        padding:3em 5em;
+        h1{
+            font-size:2.6rem;
+            margin-top:0;
+        }
+        p{
+            font-size:1.6rem
+        }
+    }
     .innovation{
         flex-direction: column;
         img{
@@ -260,13 +373,77 @@ p{
         }
     }
     .innovations{
-        display: flex
+        display: flex;
+       
+    }
+    .innovation{
+        width:20%;
+    }
+
+    .case-study-section{
+        display:flex;
+        margin: 1em auto;
+        width: 100%;
+        
+
+
+    }
+
+    .card{
+        flex-direction: row;
+        img{
+            width:55%;
+            height:100%
+        }
     }
 
     .news-section{
         display: flex
+        
     }
     .news{
         display:flex;
+        width:50%;
+        div{
+            width:50%
+        }
+        .news-description{
+            padding:0.6em;
+            
+        }
+        h2{
+            font-size: 1.45rem;
+        }
+    }
+
+    .Footer{
+        padding: 3em 7em;
+        padding-top: 2em;;
+        text-align: left;
+    }
+    .locations{
+        display: flex;
+        div{
+            margin-right:8.5em;
+        }
+    }
+    .main-footer{
+        display:flex;
+        justify-content: space-between;
+    }
+    .lower-footer{
+        margin-top: 1.3em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            margin-right:2em;
+        }
+    }
+}
+
+@media(max-width:900px){
+    .case-study-section{
+        display:none;
     }
 }
