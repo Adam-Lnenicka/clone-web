@@ -6,7 +6,7 @@ export default function Footer(){
             <div className="main-footer">
                 <div className="locations">
                     <div>
-                        <h5>London Studio</h5>
+                        <h6>London Studio</h6>
                         <p>Cairo Studios</p>
                         <p>4 Nile Street</p>
                         <p>Shoreditch</p>
@@ -17,7 +17,7 @@ export default function Footer(){
                     </div>
 
                     <div>
-                        <h5>Bristol Studio</h5>
+                        <h6>Bristol Studio</h6>
                         <p>2 College Square</p>
                         <p>Anchor Road</p>
                         <p>Bristol, BS1 5UE</p>
@@ -27,10 +27,10 @@ export default function Footer(){
                     
                 </div>
                 <div>
-                    <h5>New business</h5>
+                    <h6>New business</h6>
                     <a href="/"><span>hello@cxpartners.co.uk</span></a>
 
-                    <h5>Newsletter</h5>
+                    <h6>Newsletter</h6>
                     <form>
                         <label for="email">Your email:</label><br/>
                  
@@ -44,7 +44,7 @@ export default function Footer(){
                 </div>
             </div>
             <div className="lower-footer">
-                <div>
+                <div className="footer-links">
                     <a href="/">OUR BOOKS</a>
                     <a href="/">UX RESOURCES</a>
                     <a href="/">TERMS OF USE</a>

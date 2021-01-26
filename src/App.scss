@@ -15,21 +15,76 @@ $dark: #393838;
 $hilight-blue: #007bc7;
 
 
+.Header{
+    .navbar-toggler{
+
+        padding: 0.7em 0.8em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    }
+    nav{
+        width: 85%;
+        margin: 0 auto;
+        img{
+            width:250px
+        }
+    }
+    #nav-item{
+        padding: 1em 0em;
+        color: $light-grey;
+        border-bottom: 3px solid white;
+        &:hover{
+            border-bottom: 3px solid $light-grey;
+            color: $light-grey;
+            
+        }
+    }
+    span, #drop{
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-size: $dark;
+        letter-spacing: 1.5px;
+    
+
+        display: flex;;
+        &:hover{
+            border: 2px bottom solid red;
+        }
+        div{
+            font-weight: 900;
+            color:rgb(60, 60, 60);
+        }
+
+        i{
+            color: rgba(0, 0, 255, 0.712);
+            font-size: 0.9rem;
+            padding-right:1em;
+        }
+        #drop{
+            i{
+                color: #ff7d01;
+                margin-top:10px;
+                font-size:0.5rem;
+            }
+        }
+    }
+}
+
 
 
 .Footer{
     background-color: #3f3f3f;
     color: white;
     text-align: center;
+    padding:1em;
     button{
         @include button-link();
         color: white;
         background-color: #ff7d01;
         font-size: 0.8rem;
-
-
-    
-
+        &:hover{
+            background-color: white;
+            color: #ff7d01;
+        }
     }
     span{
         color:  #f98a48;
@@ -39,10 +94,7 @@ $hilight-blue: #007bc7;
         line-height: 4px;
         color: white;
 
-
     }
-
-
 
     form{
         display: flex;
@@ -51,6 +103,9 @@ $hilight-blue: #007bc7;
         margin: 0 auto;
         text-align: left;
         line-height: 1em;
+        div{
+            margin-bottom:1.4em;
+        }
         input, button{
             height: 2.7em;
             border-radius: 0.3em;
@@ -77,14 +132,26 @@ $hilight-blue: #007bc7;
 }
 
 
+.footer-links{
+    margin-top: 3em 0;
+    a{
+        padding: 1em;
+        padding-top:3em;
+        &:hover{
+            color:white;
+        }
+    }
 
+
+}
 .icons{
     display:flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 1em;
 
 }
+
 
 .icon1{
     background-color: #b6b6b6;
@@ -96,11 +163,20 @@ $hilight-blue: #007bc7;
     justify-content: center;
     border-radius: 50%;
     margin: 1em;
+    &:hover{
+        background-color:white;
+        cursor: pointer;
+    }
 }
 
 .icon2{
     color: #b6b6b6;
     margin: 1em;
+    cursor: pointer;
+    &:hover{
+        color:white;
+    }
+
 }
 
 
@@ -146,6 +222,15 @@ h5{
     color: #b6b6b6;
 }
 
+h6{
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #b6b6b6;
+    margin-top:1em;
+    margin-bottom: 1em;
+    font-size:0.9rem;
+}
+
 p{
     color: #3f3f3f
 }
@@ -155,6 +240,7 @@ p{
 .introduction{
     text-align: center;
     margin: 3em 1em;
+
     p{
       font-size: 1.05rem;   
     }
@@ -234,19 +320,21 @@ p{
 .news{
     background-color:#d2e2ec;
     padding:0.6em 1.5em;
+    padding-top:1.5em;
     margin:1em;
 
     div{
 
         div{
-            margin:0;
+            margin: 0.8em 0;
             letter-spacing:1px;
             text-transform: uppercase;
-    
+            p{
+                margin: 0;
+                font-size:0.9rem;
+            }
         }
     }
-
-
 }
 
 .banner{
@@ -285,10 +373,19 @@ p{
 
                  
     }
+    h1{
+        margin:0.5em
+    }
     
 }
 
+.case-study-section{
+    display:flex;
+    margin: 1em auto;
+    
 
+
+}
 
 
 .case-study{
@@ -298,18 +395,25 @@ p{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width:100%;
     margin:1em;
     text-align: center;
+    div{
+        object-fit: cover;
+        max-width: 90%;
+
+    }
 
     p{
-        font-size: 1.8rem;
-        margin:2em 1.8em;
+        font-size: 1.3rem;
+        max-width: 95%;
+        margin:1.5em 0;
+        margin-bottom:1em;
 
     }
 
     img{
-        max-width: 400px;
+        width: 100%;
+        object-fit: cover
     }
 
     a{  
@@ -327,11 +431,37 @@ p{
     }
 }
 
+.show-more{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: $dark;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size:0.97em;
+    
+    &:hover{
+        i{
+            color: #ff7d01;
+
+        }
+
+    }
+
+    i{
+        color:$hilight-blue;
+
+
+    }
+}
 
 
 
-
-@media(min-width:900px){
+@media(min-width:1050px){
     .App{
         background-color: $light-grey;
         .inner-app{
@@ -340,6 +470,62 @@ p{
             
         }
     }
+
+
+    .case-study-section2{
+        display:none;
+    
+    }
+
+    .case-study{
+        width:100%;
+
+        div{
+            object-fit: cover;
+            max-width: 400px;
+        }
+    
+        p{
+            font-size: 1.7rem;
+            max-width: 400px;
+            margin:1.5em 0;
+            margin-bottom:1em;
+    
+        }
+    
+        img{
+            width: 100%;
+            object-fit: cover
+        }
+    }
+
+    h2{
+        font-size: 2.7rem;
+        margin: 0.8em;
+    }
+    .inner-padding{
+        padding:0;
+    }
+    .introduction{
+        text-align: center;
+        margin-top: -1.5em;
+        h2{
+            font-size: 2.7rem;
+            margin-bottom:0.7em;
+        }
+        p{
+          font-size: 1.15rem;   
+          max-width: 800px;
+          margin: 0 auto
+        }
+        .introduction-paragraph{
+            p{
+                font-size: 1.6rem;  
+            }
+            
+        }
+    }
+
     .inner-padding{
         padding:4em;
     }
@@ -354,6 +540,9 @@ p{
         }
     }
 
+    .show-more{
+        display:none;
+    }
     .banner-info{
         width:40%;
         padding:3em 5em;
@@ -371,23 +560,21 @@ p{
             width: 100%;
             height: auto;
         }
+        p{
+            padding: 0em;
+            padding-top: 0.3em;
+            font-size: 1.5rem;
+        }
     }
     .innovations{
         display: flex;
        
     }
     .innovation{
-        width:20%;
+        width:25%;
     }
 
-    .case-study-section{
-        display:flex;
-        margin: 1em auto;
-        width: 100%;
-        
 
-
-    }
 
     .card{
         flex-direction: row;
@@ -400,21 +587,27 @@ p{
     .news-section{
         display: flex
         
+        
     }
     .news{
         display:flex;
         width:50%;
-        div{
-            width:50%
+        .sections{
+            width:50%;
         }
         .news-description{
             padding:0.6em;
             
         }
-        h2{
-            font-size: 1.45rem;
+        h3{
+            font-size: 1.6rem;
         }
+
+
     }
+
+
+
 
     .Footer{
         padding: 3em 7em;
@@ -437,13 +630,14 @@ p{
         justify-content: space-between;
         align-items: center;
         a{
-            margin-right:2em;
+            margin-right:0.7em;
         }
     }
 }
 
-@media(max-width:900px){
-    .case-study-section{
+@media(max-width:1050px){
+     .case-study-section{
         display:none;
     }
 }
+

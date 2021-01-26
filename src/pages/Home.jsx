@@ -3,11 +3,15 @@ import Card from '../components/Card.jsx'
 import Innovation from '../components/Innovation.jsx'
 import News from '../components/News.jsx'
 import CaseStudy from '../components/CaseStudy.jsx'
+import Header from '../components/Header.jsx'
+
+
 
 
 export default function Home(){
     
-    const display =<div className="icon1"><i class="fab fa-twitter"></i>hi there</div>
+    const display =<div className="show-more"><div><div>Show more</div>
+        <i class="fas fa-chevron-right fa-rotate-90"></i></div></div>
     const [show, setShow] = useState(false)
     const [button, setButton] = useState(display)
 
@@ -22,11 +26,11 @@ export default function Home(){
     return(
         <div className="Home">
 
-            
+            <Header/>
 
             <div className="banner">
                 
-                    <img src="https://www.cxpartners.co.uk/ui/img/homepage/hero-lg.png"/>
+                    <img src="https://www.cxpartners.co.uk/ui/img/homepage/hero-lg.png" alt="creative"/>
                     <div className="banner-info">
                         <h1>People first in a digital world</h1>
                         <p>cxpartners helps the world’s best companies to become truly customer-centred and thrive.</p>
@@ -39,8 +43,8 @@ export default function Home(){
 
                 <div className="introduction">
                     <h2>The design innovation partner</h2>
-                    <p>We believe that what's best for the customer is best for the business.<br/>
-                    If you're a customer champion or digital leader in a complex organisation or tightly regulated market, we can help you to:</p>
+                    <div className="introduction-paragraph"><p>We believe that what's best for the customer is best for the business. </p></div>
+                    <p>If you're a customer champion or digital leader in a complex organisation or tightly regulated market, we can help you to:</p>
                 </div>
                 <div className="innovations">
 
@@ -102,7 +106,7 @@ export default function Home(){
                     <div onClick={onClick2}><div onClick={onClick} >{button}</div></div>
 
                     { show ? 
-                    <div>
+                    <div className="show-more2">
                         <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/coop-banner-750.jpg"
                                     text="The secret to designing a better online supermarket? Fewer features."
                                     button="Read the case study"
@@ -120,17 +124,15 @@ export default function Home(){
 
                 <div clasName="expand"></div>
                 <div className="case-study-section">
-                    <div className="case-study">
-                        <img src="https://www.cxpartners.co.uk/ui/img/homepage/coop-banner-750.jpg"/>
-                        <p>The secret to designing a better online supermarket? Fewer features.</p>
-                        <a href="/">Read the case study</a>
-                    </div>
+                        <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/coop-banner-750.jpg"
+                                    text="The secret to designing a better online supermarket? Fewer features."
+                                    button="Read the case study"
+                        />   
 
-                    <div className="case-study">
-                        <img src="https://www.cxpartners.co.uk/ui/img/homepage/bcc-banner-750.jpg"/>
-                        <p>How did Bristol City Council transform its services? By listening to people.</p>
-                        <a href="/">Read the case study</a>
-                    </div>
+                        <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/bcc-banner-750.jpg"
+                                    text="How did Bristol City Council transform its services? By listening to people."
+                                    button="Read the case study"
+                        />  
                 </div>
 
                 <div>

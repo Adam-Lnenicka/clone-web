@@ -3,7 +3,7 @@ import React from 'react'
 export default function Card(props){
     return(
     <div className="card">
-        <img src ={props.image}/>
+        <img src ={props.image} alt="creative-work"/>
         <div className="inner-card">
             <h4 style={{display: !props.subtitle && "none"}}>{props.subtitle}</h4>
             <h3 style={{display: !props.title2 && "none"}}>{props.title2}</h3>

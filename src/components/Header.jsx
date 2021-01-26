@@ -1,92 +1,76 @@
 import React from 'react'
+import Logo from '../logo-copy.png'
+
+
+import {Link} from 'react-router-dom'
+
 
 export default function Header(){
     return(
-        <div>
+      <div className="Header">
 
-        
-        <nav id="nav">
-            <div class="inner-wrapper">
-                <svg viewBox="0 0 32 37" id="exit-btn">
-                    <path id="back" d="M15.9,4.492a3,3,0,0,1,5.194,0L34.4,27.5A3,3,0,0,1,31.8,32H5.2a3,3,0,0,1-2.6-4.5Z" transform="translate(0 37) rotate(-90)" fill="#fff"/>
-                </svg>
-                
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-            </div>
-            <ul>
-                <li class="selected"><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Reset Access</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <header>
-            <svg height="32px" id="menu-btn" class="open" viewBox="0 0 32 32">
-                <path fill="white" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-            </svg>
-            
-            <a href="#" class="logo">Company</a>
-            
-            <a href="#" class="cta-btn">Dashboard</a>
-        </header>
-        
-        <main>
-            <h1>Dashboard</h1>
-            
-            <section class="panel">
-                <ul class="data">
-                    <li>
-                        <h3>Quarterly</h3>
-                        <p>$5,201.00</p>
-                    </li>
-                    <li>
-                        <h3>Quarterly</h3>
-                        <p>$5,201.00</p>
-                    </li>
-                    <li>
-                        <h3>Quarterly</h3>
-                        <p>$5,201.00</p>
-                    </li>
-                </ul>
-            </section>
-            
-            <div class="columns half">
-                <div class="col left">
-                    <h3>Monthly Visitors</h3>
-                    
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no.</p>
-                </div>
-                <div class="col">
-                    <ul class="data secondary">
-                        <li>
-                            <h3>Quarterly</h3>
-                            <p>$5,201.00</p>
-                        </li>
-                        <li>
-                            <h3>Quarterly</h3>
-                            <p>$5,201.00</p>
-                        </li>
-                        <li>
-                            <h3>Quarterly</h3>
-                            <p>$5,201.00</p>
-                        </li>
-                        <li>
-                            <h3>Quarterly</h3>
-                            <p>$5,201.00</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </main>
-        
+    <div className="Header">
+    <nav class="navbar1 navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand navbar-brand3" href="/"><img src={Logo}/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span > <i class="fa fa-bars"></i><div>Menu</div></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item" id="nav-item">
+          <Link  class="nav-link"id="nav-link"  to="/" ><span style={{color: "#575757"}}>About us</span></Link>
+
+        </li>
+        <li class="nav-item" id="nav-item">
+            <li>
+                <Link  class="nav-link" id="nav-link" to="/" ><span style={{color: "#575757"}}>our work</span></Link>
+            </li>
+        </li>
+
+        <li class="nav-item dropdown" id="nav-item">
+                  <a  id="drop" class="nav-link" href="/"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id ="drop" style={{color: "#575757"}}>SECTORS <i class="fas fa-chevron-right fa-rotate-90"></i></span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" id="drop1" href="/">Financial services</a>
+                    <a class="dropdown-item" id="drop1" href="/">Digital Government</a>
+                    <a class="dropdown-item" id="drop1" href="/">Retail</a>
+                    <a class="dropdown-item" id="drop1" href="/">Travel</a>
+                  </div>
+        </li>
+
+        <li class="nav-item" id="nav-item">
+            <li>
+                <Link  class="nav-link" id="nav-link" to="/" ><span style={{color: "#575757"}}>blog</span></Link>
+            </li>
+        </li>
+
+        <li class="nav-item" id="nav-item">
+            <li>
+                <Link  class="nav-link" id="nav-link" to="/" ><span style={{color: "#575757"}}>careers</span></Link>
+            </li>
+        </li>
+
+        <li class="nav-item" id="nav-item">
+            <li>
+                <Link  class="nav-link" id="nav-link" to="/" ><span style={{color: "#575757"}}>contact</span></Link>
+            </li>
+        </li>
 
 
-        </div>
+      </ul>
+  
+    </div>
+    
+  </nav>
+  <p style={{color:"red"}}>Clone website created for job application purposes. <br></br>
+    Pages recreated: Home, About, Department of Dreams</p>
+  
+  </div>
+  
+  </div>
+
     )
 }
-
-
-
-
