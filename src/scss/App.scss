@@ -111,13 +111,12 @@ p{
         img{
             width:70px;
             height:auto;
-            margin:1em
+            margin:1em;
+            margin-top:0.7em
         }
 
     }
-    .txt{
-        font-size: 1.1rem;
-    }
+
     .txt{
         font-size: 1.1rem;
         letter-spacing: 0px;
@@ -135,9 +134,9 @@ p{
     }
     .name{
         p{
-            margin-bottom:0.6em;
+            margin-bottom:0em;
             padding:0;
-            font-size: 0.95rem;
+            font-size: 0.8rem;
         }
     }
     h3{
@@ -337,6 +336,12 @@ p{
         .txt2{
             font-size: 1.15em;
             padding: 0 2em;
+        }
+        .name{
+            p{
+                margin:0;
+                padding:0;
+            }
         }
 
     }
