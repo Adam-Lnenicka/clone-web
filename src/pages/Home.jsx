@@ -18,10 +18,6 @@ export default function Home(){
     const onClick = () => setShow(true)
     const onClick2 = () => setButton(null)
 
-   
-
-  
-
 
     return(
         <div className="Home">
@@ -72,36 +68,13 @@ export default function Home(){
                 <h2>Our work</h2>
                     <Card   image="https://www.cxpartners.co.uk/ui/img/homepage/richard-pash-xl.jpg" 
                     
-                            text="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
+                            text="“cxpartners is a business that helps to deliver real change - practical and actual changes that customers see and appreciate.“"
                             fullAuthor="RICHARD PASH"
                             place="MARKETING DIRECTOR, ZURICH INSURANCE UK"
+                            logo="https://www.cxpartners.co.uk/content-images/client-logos/zurich-upd.svg"
                             button="read the case study"
                             />
-
-                <h2>Ideas & Resources</h2>
-                <Card   image="https://www.cxpartners.co.uk/ui/img/ebc/ebc-brochure-xl-1x.jpg" 
-                            subtitle="our books"
-                            title2="Simple and Usable"
-                            text="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
-                            button="read the case study"
-                            />
-
-                <div className="news-section">
-                    <News   title="InsurTech 2021: customer experience remains a key battleground"
-                            author="Gabriela Isas"
-                            date="10 NOV 2020"
-                            text="In 2018 we took a snapshot of the tech startups aiming to disrupt the insurance industry. 
-                            Our updated InsurTech matrix reveals how much has really changed since then, and what we can expect in 2021."
-                    />
-
-                    <News   title="Adding friction to help people make better decisions"
-                            author="MARK SKINNER"
-                            date="21 JUL 2020"
-                            text="It’s common to try and make experiences as easy as possible, but sometimes, the best way to help customers make better decisions is to slow them down."
-                    />
-                </div>
-
-
+                
                 <div>
                     <div onClick={onClick2}><div onClick={onClick} >{button}</div></div>
 
@@ -123,47 +96,66 @@ export default function Home(){
                 </div>
 
                 <div clasName="expand"></div>
-                <div className="case-study-section">
-                        <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/coop-banner-750.jpg"
-                                    text="The secret to designing a better online supermarket? Fewer features."
-                                    button="Read the case study"
-                        />   
+                    <div className="case-study-section">
+                            <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/coop-banner-750.jpg"
+                                        text="The secret to designing a better online supermarket? Fewer features."
+                                        button="Read the case study"
+                            />   
 
-                        <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/bcc-banner-750.jpg"
-                                    text="How did Bristol City Council transform its services? By listening to people."
-                                    button="Read the case study"
-                        />  
-                </div>
+                            <CaseStudy  image="https://www.cxpartners.co.uk/ui/img/homepage/bcc-banner-750.jpg"
+                                        text="How did Bristol City Council transform its services? By listening to people."
+                                        button="Read the case study"
+                            />  
+                    </div>
+                    <div>
 
-                <div>
+                            <h2>Ideas & Resources</h2>
+                            <Card   image="https://www.cxpartners.co.uk/ui/img/ebc/ebc-brochure-xl-1x.jpg" 
+                                        subtitle="financial services"
+                                        title2="Evidence Based Compliance"
+                                        text2="Design brilliant financial products that delight customers and make the regulator happy."
+                                        button="find out more"
+                                        />
+
+                            <div className="news-section">
+                                <News   title="InsurTech 2021: customer experience remains a key battleground"
+                                        author="Gabriela Isas"
+                                        date="10 NOV 2020"
+                                        text2="In 2018 we took a snapshot of the tech startups aiming to disrupt the insurance industry. 
+                                        Our updated InsurTech matrix reveals how much has really changed since then, and what we can expect in 2021."
+                                />
+
+                                <News   title="Adding friction to help people make better decisions"
+                                        author="MARK SKINNER"
+                                        date="21 JUL 2020"
+                                        text="It’s common to try and make experiences as easy as possible, but sometimes, the best way to help customers make better decisions is to slow them down."
+                                />
+                            </div>
 
 
+                                <Card   image="https://www.cxpartners.co.uk/ui/img/homepage/simple-and-usable-xl-1x.jpg" 
+                                        subtitle="our books"
+                                        title1="Simple and Usable"
+                                        text2="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
+                                        author="GILES COLBORNE"
 
+                                        button="our books"
+                                        />
+                            </div>
 
-
-                    <Card   image="https://www.cxpartners.co.uk/ui/img/homepage/simple-and-usable-xl-1x.jpg" 
-                            subtitle="our books"
-                            title1="Simple and Usable"
-                            text="How do you cut through complexity and find answers that are simple, elegant, and powerful? This book will show you."
-                            author="RICHARD PASH"
-
-                            button="read the case study"
+                            <div className="news-section">
+                            <News   title="Learning from lockdown: accelerating change without creating a crisis"
+                                    author="GILES COLBORNE"
+                                    date="9 JUL 2020"
+                                    text="Was it just crisis management, or was there more to the rapid pace of digtial transformation during lockdown? We've been panning for gold and have found a few nuggets."
                             />
-                </div>
 
-                <div className="news-section">
-                <News   title="Learning from lockdown: accelerating change without creating a crisis"
-                        author="GILES COLBORNE"
-                        date="9 JUL 2020"
-                        text="Was it just crisis management, or was there more to the rapid pace of digtial transformation during lockdown? We've been panning for gold and have found a few nuggets."
-                />
-
-                <News   title="Serverless technology and the rise of the frontend engineer"
-                        author="DAVE MARTIN"
-                        date="26 JUN 2020"
-                        text="Serverless computing is a game-changer - delivering huge cost-savings and scalability. You can plug gaps in your service offering by employing Serverless microservices quickly and cheaply."
-                />
-                </div>
+                            <News   title="Serverless technology and the rise of the frontend engineer"
+                                    author="DAVE MARTIN"
+                                    date="26 JUN 2020"
+                                    text="Serverless computing is a game-changer - delivering huge cost-savings and scalability. You can plug gaps in your service offering by employing Serverless microservices quickly and cheaply."
+                            />
+                            </div>
                 </div>
         </div>
     )

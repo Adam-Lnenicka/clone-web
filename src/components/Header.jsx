@@ -65,7 +65,9 @@ export default function Header(){
     </div>
     
   </nav>
-  <p style={{color:"red"}}>Clone website created for job application purposes. <br></br></p>
+  <p className="project-description">Clone website created for job application purposes. <br></br>
+ Technologies used: React JS (props, hooks, React Router), SCSS (Responsive Design) 
+  </p>
   
   </div>
   
