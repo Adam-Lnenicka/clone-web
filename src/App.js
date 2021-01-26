@@ -3,7 +3,7 @@ import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import {Switch, Route, BrowserRouter as Router} from "react-router-dom"
 
-import './App.scss';
+import './scss/App.scss';
 
 function App() {
   return (
@@ -12,11 +12,11 @@ function App() {
 
 
         <Router>
-        <Switch>
-            <Route exact path="/" component={Home} />
+          <Switch>
+              <Route exact path="/" component={Home} />
 
-        </Switch>
-    </Router>
+          </Switch>
+        </Router>
         <Footer/>
       </div>
      

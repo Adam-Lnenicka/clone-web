@@ -121,7 +121,7 @@ export default function Home(){
                                 <News   title="InsurTech 2021: customer experience remains a key battleground"
                                         author="Gabriela Isas"
                                         date="10 NOV 2020"
-                                        text2="In 2018 we took a snapshot of the tech startups aiming to disrupt the insurance industry. 
+                                        text="In 2018 we took a snapshot of the tech startups aiming to disrupt the insurance industry. 
                                         Our updated InsurTech matrix reveals how much has really changed since then, and what we can expect in 2021."
                                 />
 

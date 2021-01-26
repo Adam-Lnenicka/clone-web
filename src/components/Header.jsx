@@ -66,7 +66,7 @@ export default function Header(){
     
   </nav>
   <p className="project-description">Clone website created for job application purposes. <br></br>
- Technologies used: React JS (props, hooks, React Router), SCSS (Responsive Design) 
+ Technologies used: React JS (props, hooks, React Router), SCSS (responsive design) 
   </p>
   
   </div>

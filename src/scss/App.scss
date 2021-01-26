@@ -1,3 +1,13 @@
+@import "_Header";
+@import "_Footer";
+@import "_CaseStudy";
+
+
+$light-grey: #d9d9d9;
+$dark: #393838;
+$hilight-blue: #007bc7;
+
+
 @mixin button-link{
     text-decoration: none;
     padding: 0.65em 1.5em;
@@ -8,183 +18,6 @@
     letter-spacing: 1px;;
 
 }
-
-
-$light-grey: #d9d9d9;
-$dark: #393838;
-$hilight-blue: #007bc7;
-
-
-.Header{
-    .navbar-toggler{
-
-        padding: 0.7em 0.8em;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-    }
-    nav{
-        width: 85%;
-        margin: 0 auto;
-        img{
-            width:250px
-        }
-    }
-    #nav-item{
-        padding: 1em 0em;
-        color: $light-grey;
-        border-bottom: 3px solid white;
-        &:hover{
-            border-bottom: 3px solid $light-grey;
-            color: $light-grey;
-            
-        }
-    }
-
-
-
-    span, #drop{
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        font-size: $dark;
-        letter-spacing: 1.5px;
-        display: flex;;
-
-        div{
-            font-weight: 900;
-            color:rgb(60, 60, 60);
-        }
-
-        i{
-            color: rgba(0, 0, 255, 0.712);
-            font-size: 0.9rem;
-            padding-right:1em;
-        }
-        #drop{
-            i{
-                color: #ff7d01;
-                margin-top:10px;
-                font-size:0.5rem;
-            }
-        }
-    }
-}
-
-.project-description{
-    color: red;
-    margin: 1em;
-}
-
-
-.Footer{
-    background-color: #3f3f3f;
-    color: white;
-    text-align: center;
-    padding:1em;
-    button{
-        @include button-link();
-        color: white;
-        background-color: #ff7d01;
-        font-size: 0.8rem;
-        &:hover{
-            background-color: white;
-            color: #ff7d01;
-        }
-    }
-    span{
-        color:  #f98a48;
-    }
-
-    p{
-        line-height: 4px;
-        color: white;
-
-    }
-
-    form{
-        display: flex;
-        flex-direction: column;
-        width:250px;
-        margin: 0 auto;
-        text-align: left;
-        line-height: 1em;
-        div{
-            margin-bottom:1.4em;
-        }
-        input, button{
-            height: 2.7em;
-            border-radius: 0.3em;
-            border:none;
-        }
-        p{
-            line-height: 1.2em;    
-        }
-
-    }
-
-
-    a{
-        text-decoration: none;
-        color:#b6b6b6;
-        padding: 1em 0;
-        font-size: 0.8rem;
-        letter-spacing: 1px;
-        span{
-            color:#f98a48;
-            font-size:1rem
-        }
-    }
-}
-
-
-.footer-links{
-    margin-top: 3em 0;
-    a{
-        padding: 1em;
-        padding-top:3em;
-        &:hover{
-            color:white;
-        }
-    }
-
-
-}
-.icons{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1em;
-
-}
-
-
-.icon1{
-    background-color: #b6b6b6;
-    color: #3f3f3f;
-    width: 35px;
-    height:35px;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 1em;
-    &:hover{
-        background-color:white;
-        cursor: pointer;
-    }
-}
-
-.icon2{
-    color: #b6b6b6;
-    margin: 1em;
-    cursor: pointer;
-    &:hover{
-        color:white;
-    }
-
-}
-
-
-
-
 
 
 h1{
@@ -418,76 +251,7 @@ p{
 }
 
 
-.case-study{
-    padding: 4em;
-    border: 1px $light-grey solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin:1em;
-    text-align: center;
-    div{
-        object-fit: cover;
-        max-width: 90%;
 
-    }
-
-    p{
-        font-size: 1.3rem;
-        max-width: 95%;
-        margin:1.5em 0;
-        margin-bottom:1em;
-
-    }
-
-    img{
-        width: 100%;
-        object-fit: cover
-    }
-
-    a{  
-        @include button-link();
-        background-color: white;
-        color: $hilight-blue;
-        box-sizing: border-box;
-        border: 3px $light-grey solid;
-        &:hover{
-            color: white;
-            background-color: $hilight-blue;
-            border: 3px $hilight-blue solid;        }
-
-                 
-    }
-}
-
-.show-more{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    color: $dark;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size:0.97em;
-    
-    &:hover{
-        i{
-            color: #ff7d01;
-
-        }
-
-    }
-
-    i{
-        color:$hilight-blue;
-
-
-    }
-}
 
 
 
@@ -503,60 +267,13 @@ p{
         }
     }
 
-
-
-
-    .case-study{
-        width:100%;
-
-        div{
-            object-fit: cover;
-            max-width: 400px;
-        }
-    
-        p{
-            font-size: 1.7rem;
-            max-width: 400px;
-            margin:1.5em 0;
-            margin-bottom:1em;
-    
-        }
-    
-        img{
-            width: 100%;
-            object-fit: cover
-        }
-    }
-
     h2{
-        font-size: 2.7rem;
-        margin: 0.8em;
-    }
-    .inner-padding{
-        padding:0;
-    }
-    .introduction{
-        text-align: center;
-        margin-top: -1.5em;
-        h2{
-            font-size: 2.7rem;
-            margin-bottom:0.7em;
-        }
-        p{
-          font-size: 1.15rem;   
-          max-width: 800px;
-          margin: 0 auto
-        }
-        .introduction-paragraph{
-            p{
-                font-size: 1.6rem;  
-            }
-            
-        }
+        font-size: 2.6rem;
     }
 
     .inner-padding{
         padding:4em;
+        padding-top:0;
     }
 
     .banner{
@@ -649,33 +366,6 @@ p{
 
     }
 
-
-
-
-    .Footer{
-        padding: 3em 7em;
-        padding-top: 2em;;
-        text-align: left;
-    }
-    .locations{
-        display: flex;
-        div{
-            margin-right:8.5em;
-        }
-    }
-    .main-footer{
-        display:flex;
-        justify-content: space-between;
-    }
-    .lower-footer{
-        margin-top: 1.3em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        a{
-            margin-right:0.7em;
-        }
-    }
 }
 
 @media(max-width:1050px){

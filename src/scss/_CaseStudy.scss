@@ -1,0 +1,125 @@
+$light-grey: #d9d9d9;
+$dark: #393838;
+$hilight-blue: #007bc7;
+
+.case-study{
+    padding: 4em;
+    border: 1px $light-grey solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin:1em;
+    text-align: center;
+    div{
+        object-fit: cover;
+        max-width: 90%;
+
+    }
+
+    p{
+        font-size: 1.3rem;
+        max-width: 95%;
+        margin:1.5em 0;
+        margin-bottom:1em;
+
+    }
+
+    img{
+        width: 100%;
+        object-fit: cover
+    }
+
+    a{  
+        @include button-link();
+        background-color: white;
+        color: $hilight-blue;
+        box-sizing: border-box;
+        border: 3px $light-grey solid;
+        &:hover{
+            color: white;
+            background-color: $hilight-blue;
+            border: 3px $hilight-blue solid;        }
+
+                 
+    }
+}
+
+.show-more{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: $dark;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size:0.97em;
+    
+    &:hover{
+        i{
+            color: #ff7d01;
+
+        }
+
+    }
+
+    i{
+        color:$hilight-blue;
+
+
+    }
+}
+
+@media(min-width:1050px){
+    .case-study{
+        width:100%;
+
+        div{
+            object-fit: cover;
+            max-width: 400px;
+        }
+    
+        p{
+            font-size: 1.7rem;
+            max-width: 400px;
+            margin:1.5em 0;
+            margin-bottom:1em;
+    
+        }
+    
+        img{
+            width: 100%;
+            object-fit: cover
+        }
+    }
+
+    h2{
+        font-size: 2.7rem;
+        margin: 0.8em;
+    }
+    .inner-padding{
+        padding:0;
+    }
+    .introduction{
+        text-align: center;
+        margin-top: -1.5em;
+        h2{
+            font-size: 2.7rem;
+            margin-bottom:0.7em;
+        }
+        p{
+          font-size: 1.15rem;   
+          max-width: 800px;
+          margin: 0 auto
+        }
+        .introduction-paragraph{
+            p{
+                font-size: 1.6rem;  
+            }
+            
+        }
+    }
+}

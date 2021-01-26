@@ -1,0 +1,58 @@
+$light-grey: #d9d9d9;
+$dark: #393838;
+$hilight-blue: #007bc7;
+
+.Header{
+    .navbar-toggler{
+
+        padding: 0.7em 0.8em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    }
+    nav{
+        width: 85%;
+        margin: 0 auto;
+        img{
+            width:250px
+        }
+    }
+    #nav-item{
+        padding: 1em 0em;
+        color: $light-grey;
+        border-bottom: 3px solid white;
+        &:hover{
+            border-bottom: 3px solid $light-grey;
+            color: $light-grey;
+            
+        }
+    }
+    span, #drop{
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-size: $dark;
+        letter-spacing: 1.5px;
+        display: flex;;
+
+        div{
+            font-weight: 900;
+            color:rgb(60, 60, 60);
+        }
+
+        i{
+            color: rgba(0, 0, 255, 0.712);
+            font-size: 0.9rem;
+            padding-right:1em;
+        }
+        #drop{
+            i{
+                color: #ff7d01;
+                margin-top:10px;
+                font-size:0.5rem;
+            }
+        }
+    }
+}
+
+.project-description{
+    color: red;
+    margin: 1em;
+}
